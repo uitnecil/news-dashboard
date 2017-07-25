@@ -1,0 +1,7 @@
+<form class="">
+    <md-select (change)="processChanges(languageSelected)" *ngIf="(languages.length > 0)" placeholder="Provider language" [(ngModel)]="languageSelected" name="lang">
+      <md-option *ngFor="let lang of languages" [value]="lang.value" >
+        {{lang.viewValue}}
+      </md-option>
+    </md-select>
+</form>

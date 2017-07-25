@@ -1,0 +1,63 @@
+<div *ngIf="loading">
+  <h4>Please Wait loading providers ...</h4>
+  <md-progress-bar mode="indeterminate"></md-progress-bar>
+</div>
+
+
+<md-toolbar>
+  Search, filter or select a News provider
+</md-toolbar>
+
+<div class="providers-options">
+  <div>
+    <div class="horizontal-align" style="margin: 10px;">
+      <app-search (searchString)="searchStr = $event" class="marginleft10px "></app-search>
+    </div>
+  </div>
+
+  <div>
+    <div class="horizontal-align" style="margin: 10px;">
+      <app-select-country (selectedValue)="selectedCountry = $event; retrieveProviders()"
+                          class="marginleft10px"></app-select-country>
+    </div>
+  </div>
+
+  <div>
+    <div class="horizontal-align" style="margin: 10px;">
+      <app-select-language (selectedValue)="selectedLanguage = $event; retrieveProviders()"
+                           class="marginleft10px"></app-select-language>
+    </div>
+  </div>
+
+  <div>
+    <div class="horizontal-align" style="margin: 10px;">
+      <app-select-category (selectedValue)="selectedCategory = $event; retrieveProviders()"
+                           class="marginleft10px"></app-select-category>
+    </div>
+  </div>
+
+
+</div>
+
+<div *ngIf="!news.providers">
+  No results found
+</div>
+
+<div class="">
+  <div class="flex-row">
+    <!--<div *ngFor="let prov of filterProviders()">-->
+    <div *ngFor="let prov of ( news.providers | filteredResult:searchStr )">
+      <h6 class="distance">
+        <div [routerLink]="['/news', prov.id]" class="flex-column">
+          <img *ngIf="prov.urlsToLogos.large !== ''" src='{{prov.urlsToLogos.large}}' [width]=iconsSize.width
+               [height]=iconsSize.height>
+          <img *ngIf="prov.image && (prov.urlsToLogos.large == '')" src='{{resPath}}{{prov.image}}'
+               [width]=iconsSize.width [height]=iconsSize.height>
+          <img *ngIf="!prov.image && (prov.urlsToLogos.large == '')" src='{{resPath}}no-image.png'
+               [width]=iconsSize.width [height]=iconsSize.height>
+          <span>{{prov.id}}</span>
+        </div>
+      </h6>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<form class="">
+  <md-select (change)="processChanges(countrySelected)" *ngIf="(countries.length > 0)" placeholder="Country" [(ngModel)]="countrySelected" name="countries">
+    <md-option *ngFor="let country of countries" [value]="country.value" >
+      {{country.viewValue}}
+    </md-option>
+  </md-select>
+</form>

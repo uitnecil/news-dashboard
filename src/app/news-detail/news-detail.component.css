@@ -1,0 +1,11 @@
+.author {
+  margin: 5px;
+  color: gray;
+}
+
+.author * {
+  font-size: small;
+  font-weight: lighter;
+}
+
+

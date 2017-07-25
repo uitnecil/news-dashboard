@@ -1,0 +1,7 @@
+<form class="">
+  <md-select (change)="processChanges(categorySelected)" *ngIf="(categories.length > 0)" placeholder="Category" [(ngModel)]="categorySelected" name="categories">
+    <md-option *ngFor="let category of categories" [value]="category.value" >
+      {{category.viewValue}}
+    </md-option>
+  </md-select>
+</form>

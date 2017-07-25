@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 1 auto;
+
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.flex-row a {
+  display: block;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 4px;
+
+  transition: 0.3s all ease-in-out;
+}
+
+.flex-row a:hover {
+  background: dodgerblue;
+  color: white;
+}
+
+.flex-row * {
+  cursor: pointer;
+}
+
+.flex-column {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 0 1 auto;
+
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.api-source {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  /*align-items: flex-end;*/
+
+  color: gray;
+  font-size: x-small;
+}
+
+.horizontal-align {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-basis: 30%;
+  margin: 0;
+}
+
+.providers-options {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 1 auto;
+
+  justify-content: flex-start;
+  align-items: baseline;
+  align-content: flex-start;
+}
+
+.marginleft10px {
+  margin-left: 10px;
+}

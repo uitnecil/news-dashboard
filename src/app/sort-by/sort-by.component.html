@@ -1,0 +1,15 @@
+<form class="">
+  <md-select (change)="processChanges(sortTypeSelected)" *ngIf="(sortByOptions.length > 0)" placeholder="Retrieve news sorted by" [(ngModel)]="sortTypeSelected" name="sortTypes">
+    <md-option *ngFor="let sortType of sortByOptions" [value]="sortType" >
+      {{sortType}}
+    </md-option>
+  </md-select>
+</form>
+
+<!--<form class="">-->
+  <!--<md-select (change)="processChanges(languageSelected)" *ngIf="(languages.length > 0)" placeholder="Provider language" [(ngModel)]="languageSelected" name="lang">-->
+    <!--<md-option *ngFor="let lang of languages" [value]="lang.value" >-->
+      <!--{{lang.viewValue}}-->
+    <!--</md-option>-->
+  <!--</md-select>-->
+<!--</form>-->

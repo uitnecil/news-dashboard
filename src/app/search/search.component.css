@@ -1,0 +1,9 @@
+.set-width {
+  width: 250px;
+}
+
+@media screen and (max-width: 750px) {
+  .set-width {
+    width: 100%;
+  }
+}

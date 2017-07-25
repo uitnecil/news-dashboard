@@ -1,0 +1,37 @@
+<div *ngIf="loading">
+  <h4>Please Wait loading news ...</h4>
+  <md-progress-bar mode="indeterminate"></md-progress-bar>
+</div>
+
+<div class="channel-and-back-button">
+  <md-toolbar>
+    <div>
+      <button md-raised-button color="warn" (click)="goBack()">Back to Providers</button>
+    </div>
+  </md-toolbar>
+  <md-toolbar *ngIf="!loading" class="flex-row">
+    <img *ngIf="fullProvider" src='{{resPath}}{{fullProvider.image}}' height="100%" style="cursor: default;">
+    <div style="font-size: 1.5em; cursor: default; margin-left: 10px;">{{newsProvider}}</div>
+    <!--select sort by dropdown-->
+
+    <div>
+      <div class="horizontal-align" style="margin-left: 30px;">
+        <app-sort-by (selectedValue)="selectedSortBy = $event; getNews()" class="marginleft10px"></app-sort-by>
+      </div>
+    </div>
+
+  </md-toolbar>
+
+
+
+</div>
+
+<div class="">
+  <div class="flex-row1">
+    <app-news-detail *ngFor="let eachNews of allNews" [article]="eachNews" class="border-it"></app-news-detail>
+  </div>
+</div>
+
+<md-toolbar style="margin: 5px 0">
+  <button md-raised-button color="warn" (click)="goBack()">Back to Providers</button>
+</md-toolbar>

@@ -1,0 +1,44 @@
+.border-it {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 0 1 auto;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
+  transition: 0.2s all ease-in-out;
+  width: 350px;
+  margin: 5px;
+}
+
+.flex-row1 {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 1 auto;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: flex-start;
+}
+
+.channel-and-back-button {
+  background: #F5F5F5;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media only screen and (max-width: 750px) {
+  .border-it {
+    width: 100%;
+  }
+
+  .channel-and-back-button {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  .channel-and-back-button md-toolbar {
+    width: auto;
+  }
+
+}
