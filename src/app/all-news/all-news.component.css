@@ -7,7 +7,8 @@
   align-items: stretch;
   transition: 0.2s all ease-in-out;
   width: 350px;
-  margin: 5px;
+  margin: 10px 5px;
+  padding: 0;
 }
 
 .flex-row1 {

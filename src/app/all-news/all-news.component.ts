@@ -66,8 +66,8 @@ export class AllNewsComponent implements OnInit {
     }
   }
 
-  doLoading(val: boolean) {
-    this.loading = val;
+  stopLoading(): void {
+    this.loading = false;
   }
 
   goBack() {

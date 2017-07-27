@@ -9,3 +9,43 @@
 }
 
 
+.imageState1 {
+  transition: 0.5s all ease-in-out;
+  opacity: 0;
+}
+
+.imageState2 {
+  opacity: 1;
+}
+
+
+.div-image-level1 {
+  position: relative;
+  overflow: hidden;
+
+  display: block;
+  min-height: 200px;
+  padding: 0;
+}
+
+.div-image-level1 img {
+  width: 100%;
+  height: auto;
+  /*border-bottom: 1px solid lightgray;*/
+}
+
+.div-image-level2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*width: 100%; */
+  margin:0;
+  padding: 0;
+}

@@ -3,7 +3,7 @@
   <md-progress-bar mode="indeterminate"></md-progress-bar>
 </div>
 
-<div class="channel-and-back-button">
+<div class="channel-and-back-button" >
   <md-toolbar>
     <div>
       <button md-raised-button color="warn" (click)="goBack()">Back to Providers</button>
@@ -28,7 +28,7 @@
 
 <div class="">
   <div class="flex-row1">
-    <app-news-detail *ngFor="let eachNews of allNews" [article]="eachNews" class="border-it"></app-news-detail>
+    <app-news-detail (load)="stopLoading()" *ngFor="let eachNews of allNews" [article]="eachNews" class="border-it"></app-news-detail>
   </div>
 </div>
 

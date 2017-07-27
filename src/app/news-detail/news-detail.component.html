@@ -1,23 +1,24 @@
 <md-card class="" style="height: 100%" *ngIf="article">
-  <md-card-header>
-    <!--<md-card-title>{{article.title}}</md-card-title>-->
-    <!--<md-card-subtitle></md-card-subtitle>-->
-  </md-card-header>
-  <a [href]=article.url target="_blank">
-  <img md-card-image *ngIf="article.urlToImage" [src]=article.urlToImage>
+  <a [href]=article.url target="_blank" *ngIf="article.urlToImage" >
+    <div md-card-image class="div-image-level1">
+      <div class="div-image-level2">
+        <md-spinner *ngIf="isImageLoading" ></md-spinner>
+      </div>
+    <img  #theimg [class.imageState2]="!isImageLoading" class="imageState1" src="{{article.urlToImage}}"  (load)="stopLoad()" >
+    </div>
   </a>
+
   <md-card-content>
     <h3><a [href]=article.url target="_blank">{{article.title}}</a></h3>
     <p>Description: {{article.description}}</p>
   </md-card-content>
   <md-card-actions>
     <!--<button md-button>LIKE</button>-->
-    <!--<button md-button>SHARE</button>-->
   </md-card-actions>
   <md-card-footer>
     <div class="author">
-    <div *ngIf="article.publishedAt">Published at: {{article.publishedAt | date:  'dd/MMMM/y HH:mm:ss'}}</div>
-    <div *ngIf="article.author">Author: {{article.author}}</div>
+      <div *ngIf="article.publishedAt">Published at: {{article.publishedAt | date: 'dd/MMMM/y HH:mm:ss'}}</div>
+      <div *ngIf="article.author">Author: {{article.author}}</div>
     </div>
   </md-card-footer>
 </md-card>

@@ -15,7 +15,10 @@ import { SearchComponent } from './search/search.component';
 import { FilteredResultPipe } from './filtered-result.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
-import { MD_PLACEHOLDER_GLOBAL_OPTIONS, MdButtonModule, MdCheckboxModule, MdIconModule } from '@angular/material';
+import {
+  MD_PLACEHOLDER_GLOBAL_OPTIONS, MdButtonModule, MdCheckboxModule, MdIconModule,
+  MdProgressSpinnerModule
+} from '@angular/material';
 import {MdToolbarModule, MdCardModule, MdInputModule, MdSelectModule, MdProgressBarModule, MdTooltipModule} from '@angular/material';
 import { SelectLanguageComponent } from './select-language/select-language.component';
 import { SelectCategoryComponent } from './select-category/select-category.component';
@@ -49,7 +52,8 @@ import { SortByComponent } from './sort-by/sort-by.component';
     MdSelectModule,
     MdProgressBarModule,
     MdTooltipModule,
-    MdIconModule
+    MdIconModule,
+    MdProgressSpinnerModule
   ],
   providers: [
     Injectable_providers,
