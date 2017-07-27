@@ -47,7 +47,6 @@ export class AllNewsComponent implements OnInit {
         (res: any) => {
           this.loading = false;
           this.parseResults(res);
-
         },
         // error case
         (err: any) => {

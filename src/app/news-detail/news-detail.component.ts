@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-news-detail',
@@ -25,16 +24,16 @@ export class NewsDetailComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
 
     // this replaces the (load) event on the img from the template
-    // Observable.fromEvent(this.theimg.nativeElement, 'load')
-    //   .subscribe(_ => {
-    //       this.stopLoading();
-    //     },
-    //     (err: any) => {
-    //       this.stopLoading();
-    //       console.log(err);
-    //     },
-    //     () => {
-    //       this.stopLoading();
-    //     });
+/*    Observable.fromEvent(this.theimg.nativeElement, 'load')
+      .subscribe(_ => {
+          this.stopLoad();
+        },
+        (err: any) => {
+          this.stopLoad();
+          console.log(err);
+        },
+        () => {
+          this.stopLoad();
+        });*/
   }
 }

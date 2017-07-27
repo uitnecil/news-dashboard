@@ -4,7 +4,7 @@
       <div class="div-image-level2">
         <md-spinner *ngIf="isImageLoading" ></md-spinner>
       </div>
-    <img  #theimg [class.imageState2]="!isImageLoading" class="imageState1" src="{{article.urlToImage}}"  (load)="stopLoad()" >
+    <img  #theimg [class.imageState2]="!isImageLoading" class="imageState1" src="{{article.urlToImage}}" (load)="stopLoad()" (error)="stopLoad()">
     </div>
   </a>
 
